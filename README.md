@@ -2,6 +2,10 @@
 
 > A static, mobile-first website for browsing artist discographies using the public Deezer API.
 
+## Live site
+
+🌐 [https://baltazarparra.github.io/deezer-explorer/](https://baltazarparra.github.io/deezer-explorer/)
+
 ## What this project is
 
 Deezer Explorer is a client-side-only web application that lets you search for an artist by name, view their albums in a responsive grid, and open any album to see its full tracklist, release date, and cover art. There is no backend, no user authentication, and no database. Everything runs in the browser and fetches data directly from Deezer's public API.
@@ -47,7 +51,7 @@ This stack was chosen because the project is read-only, has only three API calls
 
 ## Current status
 
-This repository is at the very beginning of development. The product plan (`PLAN.md`) has been drafted and reviewed, but no implementation has started yet. There is no working site, no `index.html`, and no deployed version.
+v1 is deployed and live on GitHub Pages. All three user flows (search, album grid, album detail) are implemented and functional. The site is mobile-first, keyboard-accessible, and has no build step.
 
 ## Local development
 
@@ -90,12 +94,5 @@ All internal assets use relative paths (`./css/style.css`, `./js/app.js`) so the
 - **API limits:** The public Deezer API is free but offers no SLA. Unexpected downtime or rate limiting would affect the site directly.
 - **No state persistence:** Search history, scroll position, and navigation state are not saved. Refreshing the page returns the user to the initial search screen.
 - **GitHub Pages caching:** Updates may take a few minutes to propagate after a push.
-
-## Immediate next steps
-
-1. **Validate API access:** Create a temporary `test-api.html` to confirm all three endpoints return valid JSON through the chosen CORS proxy in Chrome, Firefox, and Safari.
-2. **Decide proxy URL:** Pick a primary public CORS proxy and identify a fallback. Document the choice in the code as a single `API_BASE` constant.
-3. **Start Phase 1:** Build the search form and artist results list (`index.html`, search module, basic CSS).
-4. **Implement navigation state:** Decide whether to use hash-based routing or simple view toggling for moving between search, album grid, and album detail without page reloads.
 
 See `PLAN.md` for the full phased implementation plan, including acceptance criteria and manual validation steps for each phase.
